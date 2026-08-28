@@ -1,0 +1,242 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "username": "alex_vibe",
+      "name": "Alex Rivers",
+      "email": "alex@vibesphere.com",
+      "password": "password123",
+      "bio": "📸 Visual Storyteller & Tech Enthusiast | Exploring Japan 🇯🇵 | Founder @VibeLab",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80",
+      "banner": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1200&auto=format&fit=crop&q=80",
+      "followers": [
+        "u2",
+        "u3",
+        "u4"
+      ],
+      "following": [
+        "u2",
+        "u3"
+      ],
+      "verified": true,
+      "createdAt": "2026-07-29T13:55:54.088Z"
+    },
+    {
+      "id": "u2",
+      "username": "sarah_art",
+      "name": "Sarah Chen",
+      "email": "sarah@vibesphere.com",
+      "password": "password123",
+      "bio": "🎨 Digital Artist & UI/UX Designer | Creating colorful worlds ✨ | Open for commissions",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&auto=format&fit=crop&q=80",
+      "banner": "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=1200&auto=format&fit=crop&q=80",
+      "followers": [
+        "u1",
+        "u3"
+      ],
+      "following": [
+        "u1",
+        "u4"
+      ],
+      "verified": true,
+      "createdAt": "2026-08-03T13:55:54.089Z"
+    },
+    {
+      "id": "u3",
+      "username": "cyber_sam",
+      "name": "Sam Brooks",
+      "email": "sam@vibesphere.com",
+      "password": "password123",
+      "bio": "💻 Full-Stack Dev | Cyberpunk Aesthetics 🌆 | Coffee & Code ☕️",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80",
+      "banner": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1200&auto=format&fit=crop&q=80",
+      "followers": [
+        "u1",
+        "u2"
+      ],
+      "following": [
+        "u1",
+        "u2",
+        "u4"
+      ],
+      "verified": false,
+      "createdAt": "2026-08-08T13:55:54.089Z"
+    },
+    {
+      "id": "u4",
+      "username": "elena_design",
+      "name": "Elena Rostova",
+      "email": "elena@vibesphere.com",
+      "password": "password123",
+      "bio": "🌿 Minimalist Living & Architecture | Paris 🇫🇷 | Curating peaceful spaces",
+      "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&auto=format&fit=crop&q=80",
+      "banner": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&auto=format&fit=crop&q=80",
+      "followers": [
+        "u2",
+        "u3"
+      ],
+      "following": [
+        "u1"
+      ],
+      "verified": true,
+      "createdAt": "2026-08-13T13:55:54.089Z"
+    },
+    {
+      "id": "u_1787926037199_uikc",
+      "username": "muhammadd7860@gmail.com",
+      "name": "Muhammad Ahmed",
+      "email": "muhammadd7860@gmail.com",
+      "password": "Ahmed12345",
+      "bio": "",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=muhammadd7860@gmail.com",
+      "banner": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1200&auto=format&fit=crop&q=80",
+      "followers": [],
+      "following": [],
+      "verified": false,
+      "createdAt": "2026-08-28T14:07:17.199Z"
+    }
+  ],
+  "posts": [
+    {
+      "id": "p1",
+      "userId": "u1",
+      "type": "image",
+      "mediaUrl": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=1000&auto=format&fit=crop&q=80",
+      "caption": "Tokyo at night hitting differently 🌃✨ The neon reflections in Shibuya after rainy hours. Which city is your favorite night walk?",
+      "location": "Shibuya Crossing, Tokyo",
+      "likes": [
+        "u2",
+        "u3",
+        "u4"
+      ],
+      "comments": [
+        {
+          "id": "c1",
+          "userId": "u2",
+          "text": "Incredible mood and color grading! 🔥",
+          "createdAt": "2026-08-28T09:55:54.089Z"
+        },
+        {
+          "id": "c2",
+          "userId": "u3",
+          "text": "Cyberpunk vibes for real 🤖⚡️",
+          "createdAt": "2026-08-28T11:55:54.089Z"
+        }
+      ],
+      "createdAt": "2026-08-28T08:55:54.089Z"
+    },
+    {
+      "id": "p2",
+      "userId": "u2",
+      "type": "image",
+      "mediaUrl": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=1000&auto=format&fit=crop&q=80",
+      "caption": "Fresh abstract fluid art piece finished today! 🎨 Liquid acrylics on 36x48 canvas. What emotion does this color palette bring out in you?",
+      "location": "Studio 404, San Francisco",
+      "likes": [
+        "u1",
+        "u3"
+      ],
+      "comments": [
+        {
+          "id": "c3",
+          "userId": "u1",
+          "text": "The gradient blend is hypnotic! Absolutely stunning work Sarah ❤️",
+          "createdAt": "2026-08-28T05:55:54.089Z"
+        }
+      ],
+      "createdAt": "2026-08-28T01:55:54.089Z"
+    },
+    {
+      "id": "p3",
+      "userId": "u3",
+      "type": "video",
+      "mediaUrl": "https://assets.mixkit.co/videos/preview/mixkit-code-animation-on-a-screen-41551-large.mp4",
+      "caption": "Late night coding session building the future of social apps 🚀 VibeSphere is coming along nicely! Clean tech stack, fast UI.",
+      "location": "Silicon Valley, CA",
+      "likes": [
+        "u1",
+        "u2",
+        "u4"
+      ],
+      "comments": [
+        {
+          "id": "c4",
+          "userId": "u4",
+          "text": "Love the dark aesthetic! Keep pushing Sam 💻👏",
+          "createdAt": "2026-08-27T22:55:54.089Z"
+        }
+      ],
+      "createdAt": "2026-08-27T19:55:54.089Z"
+    },
+    {
+      "id": "p4",
+      "userId": "u4",
+      "type": "image",
+      "mediaUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1000&auto=format&fit=crop&q=80",
+      "caption": "Morning light filtered through minimalist oak blinds. Peace begins in simple architecture 🌿☀️",
+      "location": "Le Marais, Paris",
+      "likes": [
+        "u1",
+        "u2"
+      ],
+      "comments": [],
+      "createdAt": "2026-08-27T13:55:54.089Z"
+    }
+  ],
+  "stories": [
+    {
+      "id": "s1",
+      "userId": "u1",
+      "mediaUrl": "https://images.unsplash.com/photo-1528164344705-47542687990d?w=600&auto=format&fit=crop&q=80",
+      "type": "image",
+      "caption": "Morning coffee in Kyoto ☕️",
+      "createdAt": "2026-08-28T11:55:54.089Z"
+    },
+    {
+      "id": "s2",
+      "userId": "u2",
+      "mediaUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&auto=format&fit=crop&q=80",
+      "type": "image",
+      "caption": "Painting progress 🎨",
+      "createdAt": "2026-08-28T08:55:54.089Z"
+    },
+    {
+      "id": "s3",
+      "userId": "u3",
+      "mediaUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&auto=format&fit=crop&q=80",
+      "type": "image",
+      "caption": "Cyberpunk setup complete 💻",
+      "createdAt": "2026-08-28T05:55:54.089Z"
+    }
+  ],
+  "messages": [
+    {
+      "id": "m1",
+      "senderId": "u2",
+      "receiverId": "u1",
+      "text": "Hey Alex! Loved your night photos from Shibuya! 🌃",
+      "createdAt": "2026-08-28T10:55:54.089Z"
+    },
+    {
+      "id": "m2",
+      "senderId": "u1",
+      "receiverId": "u2",
+      "text": "Thanks Sarah! Tokyo was surreal. How is the new artwork coming along?",
+      "createdAt": "2026-08-28T11:25:54.089Z"
+    },
+    {
+      "id": "m3",
+      "senderId": "u2",
+      "receiverId": "u1",
+      "text": "Just finished it! Posted on my profile 🎨 Check it out when you get a chance!",
+      "createdAt": "2026-08-28T11:55:54.089Z"
+    },
+    {
+      "id": "m4",
+      "senderId": "u3",
+      "receiverId": "u1",
+      "text": "Yo Alex, let us catch up on VibeSphere tech stack performance soon!",
+      "createdAt": "2026-08-28T12:55:54.089Z"
+    }
+  ]
+}
