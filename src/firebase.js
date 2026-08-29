@@ -13,7 +13,8 @@ import {
   setDoc, 
   getDoc, 
   getDocs, 
-  updateDoc, 
+  updateDoc,
+  deleteDoc,
   collection, 
   query, 
   where, 
@@ -57,7 +58,8 @@ export {
   setDoc, 
   getDoc, 
   getDocs, 
-  updateDoc, 
+  updateDoc,
+  deleteDoc,
   collection, 
   query, 
   where, 
@@ -71,3 +73,4 @@ export {
   uploadBytesResumable,
   getDownloadURL
 };
+
