@@ -4,11 +4,11 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"node server/index.js\" \"npx.cmd vite\"",
+    "dev": "concurrently \"node server/index.js\" \"npx vite\"",
     "server": "node server/index.js",
-    "client": "npx.cmd vite",
-    "build": "npx.cmd vite build",
-    "preview": "npx.cmd vite preview"
+    "client": "npx vite",
+    "build": "npx vite build",
+    "preview": "npx vite preview"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
