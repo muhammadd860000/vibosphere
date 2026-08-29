@@ -3,11 +3,7 @@ import {
   db, 
   collection, 
   addDoc, 
-  query, 
-  where, 
-  orderBy, 
-  onSnapshot, 
-  serverTimestamp 
+  onSnapshot
 } from '../firebase';
 import { useAuth } from './AuthContext';
 
@@ -16,25 +12,23 @@ const SocketContext = createContext();
 export const SocketProvider = ({ children }) => {
   const { user } = useAuth();
   const [realtimeMessages, setRealtimeMessages] = useState([]);
-  const [onlineUsers, setOnlineUsers] = useState([]);
+  const [onlineUsers] = useState([]);
 
   useEffect(() => {
     if (!user) return;
 
-    // Listen live to direct messages involving current user
-    const q = query(
-      collection(db, 'messages'),
-      orderBy('createdAt', 'asc')
-    );
-
-    const unsubscribe = onSnapshot(q, (snapshot) => {
+    // Real-time listener on ALL messages — filter client-side for privacy
+    const unsubscribe = onSnapshot(collection(db, 'messages'), (snapshot) => {
       const msgs = [];
-      snapshot.forEach(doc => {
-        const data = doc.data();
+      snapshot.forEach(docSnap => {
+        const data = docSnap.data();
+        // Only surface messages involving the current user
         if (data.senderId === user.uid || data.receiverId === user.uid) {
-          msgs.push({ id: doc.id, ...data });
+          msgs.push({ id: docSnap.id, ...data });
         }
       });
+      // Sort chronologically
+      msgs.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
       setRealtimeMessages(msgs);
     }, (err) => {
       console.warn('Firestore messages snapshot warning:', err);
@@ -43,14 +37,22 @@ export const SocketProvider = ({ children }) => {
     return () => unsubscribe();
   }, [user]);
 
-  const sendMessage = async (receiverId, text, mediaUrl = null) => {
+  /**
+   * Send a text or media message to a receiver.
+   * @param {string} receiverId
+   * @param {string} text
+   * @param {{ base64: string, type: 'image'|'video', mimeType: string } | null} mediaData
+   */
+  const sendMessage = async (receiverId, text, mediaData = null) => {
     if (!user) return;
     try {
       await addDoc(collection(db, 'messages'), {
         senderId: user.uid,
         receiverId,
-        text,
-        mediaUrl: mediaUrl || null,
+        text: text || '',
+        mediaUrl: mediaData?.base64 || null,   // inline base64 data-URL
+        mediaType: mediaData?.type || null,     // 'image' | 'video'
+        mimeType: mediaData?.mimeType || null,
         createdAt: new Date().toISOString()
       });
     } catch (err) {
